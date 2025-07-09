@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Brain Tumor Detection</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f7f9fc;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #232f3e;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .content {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .content img {
+      width: 40%;
+      border-radius: 20px;
+      margin: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    }
+
+    .upload-box {
+      margin-top: 40px;
+    }
+
+    .upload-box input[type="file"] {
+      margin-bottom: 10px;
+    }
+
+    .upload-box button {
+      padding: 10px 25px;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #232f3e;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🧠 Brain Tumor Detection</h1>
+  <p>MRI Analysis — Assistive Diagnosis</p>
+</header>
+
+<div class="content">
+  <img src="{{ url_for('static', filename='brain_mri.jpg') }}" alt="MRI Brain">
+  <img src="{{ url_for('static', filename='ai_medicine.jpg') }}" alt="AI in Medicine">
+
+  <div class="upload-box">
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+      <input type="file" name="file" accept="image/*" required><br>
+      <button type="submit">Analyze MRI</button>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <p> Made by Farhat </p>
+</footer>
+
+</body>
+</html>

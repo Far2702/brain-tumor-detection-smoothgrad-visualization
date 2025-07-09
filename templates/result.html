@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Result</title>
+  <style>
+    body { font-family: Arial; background-color: #f4f4f4; text-align: center; padding: 50px; }
+    .box { background: white; padding: 30px; border-radius: 10px; display: inline-block; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    .btn { margin-top: 20px; padding: 10px 20px; border: none; background: #007bff; color: white; border-radius: 5px; cursor: pointer; }
+    .btn:hover { background: #0056b3; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Prediction: {{ prediction }}</h1>
+    <p>Confidence: {{ confidence }}%</p>
+
+    <form action="/smoothgrad" method="GET">
+        <p>It may take 40 seconds to create the smoothgrad overlay image</p>
+      <button class="btn" type="submit">View SmoothGrad Visualization</button>
+    </form>
+  </div>
+</body>
+</html>
