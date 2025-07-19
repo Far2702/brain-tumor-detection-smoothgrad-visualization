@@ -27,6 +27,7 @@ Due to the small size of the dataset I have decided to use a pre trianed model t
 
 # Example Visualization
 ![SmoothGrad output](static/first.jpg)
+Here we can clearly see the model is able to focus on the tumor region without much outside noise.
 
 # Tech Stack
 * Frontend: HTML
