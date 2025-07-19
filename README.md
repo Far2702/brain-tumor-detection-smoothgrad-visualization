@@ -24,9 +24,14 @@ Due to the small size of the dataset I have decided to use a pre trianed model t
 * Made a Flask App with the features to visualize the smoothgrad heatmap overlayed on the real image
 * Used **ROC** and **AUC** to find the best threshold
 
+
+# Example Visualization
+![SmoothGrad output](static/first.jpg)
+
 # Tech Stack
 * Frontend: HTML
 * Backend: Flask (Python)
 * Deep Learning: Tensorflow, Keras, RadImageNET(ResNET50)
 * Image Processing: Numpy, OpenCV 
+
 
